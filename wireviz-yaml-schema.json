@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "WireViz",
+  "description": "WireViz schema",
+  "type": "object",
+
+  "properties": {
+
+    "connectors": {
+      "description": "List of connectors",
+      "type": "object"
+    },
+
+    "cables": {
+      "description": "List of cables",
+      "type": "object"
+    },
+
+    "connections": {
+      "description": "List of connections",
+      "type": "array",
+      "items": {
+        "type": "array"
+      }
+    }
+
+  },
+
+  "required": [ "connectors", "cables", "connections" ]
+
+}

@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"emeraldwalk.runonsave": {
+			"commands": [
+				{
+					"match": "\\.yml$",
+					"cmd": "wireviz ${file}"
+				},
+				
+			]
+		},
+
+		"yaml.schemas": {
+			"./wireviz-yaml-schema.json": ["dev/*.yml"],
+		}
+	}
+}
