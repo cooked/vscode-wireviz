@@ -1,1 +1,1 @@
-# vscode-wirewiz
+# vscode-wireviz
