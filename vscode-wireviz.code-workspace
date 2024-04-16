@@ -16,7 +16,7 @@
 		},
 
 		"yaml.schemas": {
-			"./wireviz-yaml-schema.json": ["dev/*.yml"],
+			"./wireviz-yaml-schema.json": ["wireviz*/*.yml"],
 		}
 	}
 }

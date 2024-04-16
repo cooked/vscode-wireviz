@@ -15,17 +15,17 @@ def expand_range(my_str):
 
 def main(arguments):
 
-    #parser = argparse.ArgumentParser(
-    #    description=__doc__,
-    #    formatter_class=argparse.RawDescriptionHelpFormatter)
-    #parser.add_argument('infile', help="Input file", type=argparse.FileType('r'))
-    #parser.add_argument('-o', '--outfile', help="Output file",
-    #                    default=sys.stdout, type=argparse.FileType('w'))
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('infile', help="Input file", type=argparse.FileType('r'))
+    parser.add_argument('-o', '--outfile', help="Output file", default=sys.stdout, type=argparse.FileType('w'))
 
-    #args = parser.parse_args(arguments)
-    filename = 'wvtest'
+    args = parser.parse_args(arguments)
+    
+    filename = args[0].split('.')[0]
 
-    with open(filename+'.yml', 'r') as file:
+    with open(filename, 'r') as file:
         wv = yaml.safe_load(file)
 
     with open(filename+'-from-to.csv', 'w', newline='') as csvfile:
